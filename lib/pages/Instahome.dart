@@ -12,7 +12,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_instagram_clone/enum/user_state.dart';
 // import 'package:flutter_instagram_clone/provider/user_provider.dart';
 import 'package:flutter_instagram_clone/resources/firebase_methods.dart';
-import 'package:flutter_instagram_clone/resources/notificationController.dart';
+
 import 'package:flutter_instagram_clone/screens/callscreen/pickup/pickup_layout.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_instagram_clone/screens/loading.dart';
