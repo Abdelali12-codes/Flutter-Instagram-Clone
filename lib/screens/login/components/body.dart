@@ -57,10 +57,12 @@ class _BodyState extends State<Body> {
                       if (!EmailValidator.validate(value.trim())) {
                         setState(() {
                           emailerror = 'please Enter valid email';
+                          error = '';
                         });
                       } else {
                         setState(() {
                           emailerror = '';
+                          error = '';
                         });
                       }
                       setState(() {
@@ -77,10 +79,12 @@ class _BodyState extends State<Body> {
                       setState(() {
                         passworderror =
                             'the password must have at least 8 characters';
+                        error = '';
                       });
                     } else {
                       setState(() {
                         passworderror = '';
+                        error = '';
                       });
                     }
                     setState(() {
@@ -99,17 +103,13 @@ class _BodyState extends State<Body> {
                           setState(() {
                             loading = true;
                           });
-                          UserCredential result =
-                              await _auth.signInWithEmailAndPassword(
-                                  email: email.trim(),
-                                  password: password.trim());
-                          // await _auth.signInWithEmailAndPassword(
-                          //     email: "abdelali@gmail.com",
-                          //     password: "123456789");
-                          User user = result.user;
-                          if (user == null) {
+
+                          try {
+                            await _auth.signInWithEmailAndPassword(
+                                email: email.trim(), password: password.trim());
+                          } catch (e) {
                             setState(() {
-                              error = "An error occured";
+                              error = e.message.toString();
                               loading = false;
                             });
                           }

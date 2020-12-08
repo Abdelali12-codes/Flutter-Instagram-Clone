@@ -122,7 +122,7 @@ class _BodyState extends State<Body> {
                     } catch (e) {
                       setState(() {
                         isloading = false;
-                        error = '${e.message}';
+                        error = e.message.toString();
                       });
                     }
                   }
