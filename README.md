@@ -4,6 +4,13 @@
 https://youtu.be/J0fmxUIemxA
 A new Flutter project.
 
+# Typing and Online Status:
+https://youtu.be/6pe6vp8k1wM
+
+# Like and Comment On posts:
+https://youtu.be/Gtm0CGM8wts
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
